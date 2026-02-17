@@ -22,6 +22,20 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", changeNav);
   }, []);
 
+  useEffect(() => {
+    if (click) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
+    };
+  }, [click]);
+
   return (
     <>
       <div className="w-full h-[95.77px]">
@@ -67,9 +81,9 @@ const Navbar = () => {
 
               <ul
                 className={`
-            flex flex-col absolute top-20 left-0 w-full h-[calc(100vh-80px)] bg-background transition-transform duration-500 z-40
+            flex flex-col fixed top-0 left-0 w-full h-full bg-background transition-transform duration-500 z-40 pt-24 overflow-hidden touch-none
             ${click ? "translate-x-0" : "-translate-x-full"}
-            lg:flex-row lg:static lg:w-auto lg:h-auto lg:bg-transparent lg:translate-x-0 lg:visible lg:flex lg:gap-8
+            lg:flex-row lg:static lg:w-auto lg:h-auto lg:bg-transparent lg:translate-x-0 lg:visible lg:flex lg:gap-8 lg:pt-0
           `}
               >
                 <li className="w-full text-center lg:w-auto">
