@@ -62,10 +62,12 @@ const FAQ = () => {
             {faqs.map((item, index) => (
               <div
                 key={index}
-                className={`transition-all duration-300 border-b border-[#E6E6E6] last:border-0 ${
+                className={`transition-all duration-300 ${
                   clicked === index
-                    ? "bg-[#FAF5F0] rounded-2xl"
-                    : "bg-transparent"
+                    ? "bg-[#FAF5F0] rounded-[24px] border border-[#E8B086] my-3 overflow-hidden"
+                    : clicked === index - 1
+                      ? "bg-transparent border-b-0"
+                      : "bg-transparent border-b border-[#E6E6E6] last:border-0"
                 }`}
               >
                 <div
