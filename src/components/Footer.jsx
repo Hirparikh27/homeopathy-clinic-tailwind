@@ -169,7 +169,7 @@ const Footer = () => {
                     Email
                   </span>
                   <a
-                    href="mailto:hello@enaaya.com"
+                    href="mailto:enaayahomeopathy@gmail.com"
                     className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#1A1A1A] hover:text-[#E8B086] transition-colors duration-300 no-underline"
                   >
                     enaayahomeopathy@gmail.com
@@ -180,7 +180,7 @@ const Footer = () => {
                     Phone
                   </span>
                   <a
-                    href="tel:+11234567890"
+                    href="tel:+919274733288"
                     className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#1A1A1A] hover:text-[#E8B086] transition-colors duration-300 no-underline"
                   >
                     +91 92747 33288
