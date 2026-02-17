@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
-import { contactInfo } from "../data";
+const contactInfo = {
+  phone: "+91 92747 33288",
+  whatsapp: "919274733288",
+  address:
+    "First Floor FF21, Maple Tree, near Surdhara Circle, Thaltej, Ahmedabad, GJ",
+};
 
 const Appointment = () => {
   const [formData, setFormData] = useState({
@@ -24,9 +29,9 @@ const Appointment = () => {
   return (
     <section
       id="appointment"
-      className="py-20 bg-gradient-to-br from-background to-[#EEF3F1]"
+      className="pt-10 pb-20 bg-gradient-to-br from-background to-[#EEF3F1]"
     >
-      <div className="container">
+      <div className="max-w-[1190px] mx-auto px-4 lg:px-0">
         <div className="flex items-center justify-between gap-[50px] lg:flex-col lg:text-center">
           <motion.div
             className="flex-1"
@@ -58,7 +63,7 @@ const Appointment = () => {
           </motion.div>
 
           <motion.div
-            className="flex-1 max-w-[500px] bg-white p-10 rounded-3xl shadow-xl lg:w-full"
+            className="flex-1 max-w-[500px] bg-white p-10 rounded-3xl lg:w-full"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}

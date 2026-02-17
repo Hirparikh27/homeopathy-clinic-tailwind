@@ -8,8 +8,11 @@ import youtubeIcon from "../assets/images/yt.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#FAF5F0] pt-[60px] sm:pt-[80px] pb-[30px] sm:pb-[40px]">
-      <div className="container px-3 sm:px-5 mx-auto max-w-[1158px]">
+    <footer
+      id="footer"
+      className="bg-[#FAF5F0] pt-[60px] sm:pt-[80px] pb-[30px] sm:pb-[40px]"
+    >
+      <div className="max-w-[1190px] mx-auto px-4 lg:px-0">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 sm:gap-12 lg:gap-0 mb-12 sm:mb-20">
           {/* Brand Column */}
           <div className="flex flex-col items-start w-full lg:max-w-[531.31px] gap-[20px] sm:gap-[25px]">
@@ -40,7 +43,9 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-3 sm:gap-4">
               <a
-                href="#"
+                href="https://wa.me/919274733288"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] rounded-full border border-[#295C51]/20 flex items-center justify-center transition-all duration-300 hover:bg-[#295C51] group"
               >
                 <img
@@ -50,7 +55,9 @@ const Footer = () => {
                 />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/enaaya_homeopathy?igsh=MTljMHY1dHVkOGwzcA%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] rounded-full border border-[#295C51]/20 flex items-center justify-center transition-all duration-300 hover:bg-[#295C51] group"
               >
                 <img
@@ -60,7 +67,9 @@ const Footer = () => {
                 />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/share/1Dpn15yBoi/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] rounded-full border border-[#295C51]/20 flex items-center justify-center transition-all duration-300 hover:bg-[#295C51] group"
               >
                 <img
@@ -70,7 +79,9 @@ const Footer = () => {
                 />
               </a>
               <a
-                href="#"
+                href="https://youtube.com/@drbhavyakumarkoladiya?si=BzCQs4TZG82AudcL"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] rounded-full border border-[#295C51]/20 flex items-center justify-center transition-all duration-300 hover:bg-[#295C51] group"
               >
                 <img
@@ -85,7 +96,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row gap-12 lg:gap-[104px] w-full lg:w-auto">
             {/* Quick Links Column */}
             <div className="flex flex-col w-full lg:w-[113px]">
-              <h3 className="font-josefin font-bold text-[18px] sm:text-[20px] text-[#295C51] mb-4 sm:mb-6">
+              <h3 className="font-josefin font-bold text-[18px] sm:text-[20px] text-[#1A1A1A] mb-4 sm:mb-6">
                 Quick Links
               </h3>
               <ul className="flex flex-col gap-[16px] sm:gap-[24px]">
@@ -95,7 +106,7 @@ const Footer = () => {
                     smooth={true}
                     duration={500}
                     offset={-100}
-                    className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#295C51] hover:text-[#E8B086] transition-colors duration-300 cursor-pointer no-underline"
+                    className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#666666] hover:text-[#E8B086] transition-colors duration-300 cursor-pointer no-underline"
                   >
                     Home
                   </Link>
@@ -106,7 +117,7 @@ const Footer = () => {
                     smooth={true}
                     duration={500}
                     offset={-80}
-                    className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#295C51] hover:text-[#E8B086] transition-colors duration-300 cursor-pointer no-underline"
+                    className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#666666] hover:text-[#E8B086] transition-colors duration-300 cursor-pointer no-underline"
                   >
                     Services
                   </Link>
@@ -117,7 +128,7 @@ const Footer = () => {
                     smooth={true}
                     duration={500}
                     offset={-80}
-                    className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#295C51] hover:text-[#E8B086] transition-colors duration-300 cursor-pointer no-underline"
+                    className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#666666] hover:text-[#E8B086] transition-colors duration-300 cursor-pointer no-underline"
                   >
                     About
                   </Link>
@@ -128,9 +139,20 @@ const Footer = () => {
                     smooth={true}
                     duration={500}
                     offset={-80}
-                    className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#295C51] hover:text-[#E8B086] transition-colors duration-300 cursor-pointer no-underline"
+                    className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#666666] hover:text-[#E8B086] transition-colors duration-300 cursor-pointer no-underline"
                   >
                     Testimonials
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="faq"
+                    smooth={true}
+                    duration={500}
+                    offset={-80}
+                    className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#666666] hover:text-[#E8B086] transition-colors duration-300 cursor-pointer no-underline"
+                  >
+                    FAQs
                   </Link>
                 </li>
               </ul>
@@ -138,38 +160,38 @@ const Footer = () => {
 
             {/* Get in Touch Column */}
             <div className="flex flex-col w-full lg:w-[211px]">
-              <h3 className="font-josefin font-bold text-[18px] sm:text-[20px] text-[#295C51] mb-4 sm:mb-6">
+              <h3 className="font-josefin font-bold text-[18px] sm:text-[20px] text-[#1A1A1A] mb-4 sm:mb-6">
                 Get in Touch
               </h3>
               <div className="flex flex-col gap-[16px] sm:gap-[24px]">
-                <div className="flex flex-col gap-1">
-                  <span className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#295C51]">
+                <div className="flex flex-col gap-0">
+                  <span className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#666666]">
                     Email
                   </span>
                   <a
                     href="mailto:hello@enaaya.com"
-                    className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#295C51] hover:text-[#E8B086] transition-colors duration-300 no-underline"
+                    className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#1A1A1A] hover:text-[#E8B086] transition-colors duration-300 no-underline"
                   >
-                    hello@enaaya.com
+                    enaayahomeopathy@gmail.com
                   </a>
                 </div>
-                <div className="flex flex-col gap-1">
-                  <span className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#295C51]">
+                <div className="flex flex-col gap-0">
+                  <span className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#666666]">
                     Phone
                   </span>
                   <a
                     href="tel:+11234567890"
-                    className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#295C51] hover:text-[#E8B086] transition-colors duration-300 no-underline"
+                    className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#1A1A1A] hover:text-[#E8B086] transition-colors duration-300 no-underline"
                   >
-                    +1 (123) 456-7890
+                    +91 92747 33288
                   </a>
                 </div>
-                <div className="flex flex-col gap-1">
-                  <span className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#295C51]">
+                <div className="flex flex-col gap-0">
+                  <span className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#666666]">
                     Clinic Timings:
                   </span>
-                  <span className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#295C51]">
-                    Mon-Sat, 9 AM - 7 PM
+                  <span className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#1A1A1A] whitespace-nowrap">
+                    Mon to Sat 10:30 to 7:30 <br /> Sun 10:30 to 1:30
                   </span>
                 </div>
               </div>
@@ -179,21 +201,21 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="border-t border-[#295C51]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-josefin font-normal text-[14px] sm:text-[18px] lg:text-[21px] text-[#295C51] text-center md:text-left">
-            &copy; 2025 NAME. All Rights Reserved.
+          <p className="font-josefin font-normal text-[14px] sm:text-[18px] lg:text-[20px] text-[#1A1A1A] text-center md:text-left">
+            &copy; 2026 Enaaya Homeopathy. All Rights Reserved.
           </p>
           <div className="flex gap-8">
             <a
               href="#"
-              className="font-josefin font-normal text-[14px] sm:text-[18px] lg:text-[21px] text-[#295C51] hover:text-[#E8B086] transition-colors duration-300 no-underline"
+              className="font-josefin font-normal text-[14px] sm:text-[18px] lg:text-[20px] text-[#1A1A1A] hover:text-[#E8B086] transition-colors duration-300 no-underline"
             >
               Privacy Policy
             </a>
             <a
               href="#"
-              className="font-josefin font-normal text-[14px] sm:text-[18px] lg:text-[21px] text-[#295C51] hover:text-[#E8B086] transition-colors duration-300 no-underline"
+              className="font-josefin font-normal text-[14px] sm:text-[18px] lg:text-[20px] text-[#1A1A1A] hover:text-[#E8B086] transition-colors duration-300 no-underline"
             >
-              Privacy Policy
+              Terms & Conditions
             </a>
           </div>
         </div>

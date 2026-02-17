@@ -27,11 +27,11 @@ const Navbar = () => {
         <nav
           className={`w-full flex justify-center items-center z-[999] transition-all duration-300 ${
             scroll
-              ? "fixed top-0 left-0 w-full h-16 sm:h-20 bg-background shadow-md border-b border-primary/10 p-0"
+              ? "fixed top-0 left-0 w-full h-16 sm:h-20 bg-background border-b border-primary/10 p-0"
               : "relative h-[70px] sm:h-[80px] lg:h-[95.77px] bg-background py-4 sm:py-6 lg:py-8"
           }`}
         >
-          <div className="container flex justify-between items-center w-full p-0 px-3 lg:px-20">
+          <div className="max-w-[1190px] mx-auto flex justify-between items-center w-full p-0 px-4">
             <Link
               to="home"
               smooth={true}
@@ -97,6 +97,18 @@ const Navbar = () => {
                 </li>
                 <li className="w-full text-center lg:w-auto">
                   <Link
+                    to="trust"
+                    smooth={true}
+                    duration={500}
+                    offset={-80}
+                    className="text-[#295C51] font-josefin font-normal text-[21px] leading-[1.1] tracking-normal cursor-pointer transition-colors duration-300 hover:text-secondary block w-full p-8 lg:inline-block lg:w-auto lg:p-0"
+                    onClick={closeMobileMenu}
+                  >
+                    Why Us?
+                  </Link>
+                </li>
+                <li className="w-full text-center lg:w-auto">
+                  <Link
                     to="about"
                     smooth={true}
                     duration={500}
@@ -104,7 +116,7 @@ const Navbar = () => {
                     className="text-[#295C51] font-josefin font-normal text-[21px] leading-[1.1] tracking-normal cursor-pointer transition-colors duration-300 hover:text-secondary block w-full p-8 lg:inline-block lg:w-auto lg:p-0"
                     onClick={closeMobileMenu}
                   >
-                    About
+                    Our Dr
                   </Link>
                 </li>
                 <li className="w-full text-center lg:w-auto">
@@ -121,7 +133,7 @@ const Navbar = () => {
                 </li>
                 <li className="w-full text-center lg:w-auto">
                   <Link
-                    to="faqs"
+                    to="faq"
                     smooth={true}
                     duration={500}
                     offset={-80}
@@ -135,7 +147,7 @@ const Navbar = () => {
 
               <div className="hidden lg:block">
                 <Link
-                  to="appointment"
+                  to="footer"
                   smooth={true}
                   duration={500}
                   offset={-80}
