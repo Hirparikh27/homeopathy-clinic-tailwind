@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
+import logo from "../assets/images/Group.png";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -41,7 +42,7 @@ const Navbar = () => {
               onClick={closeMobileMenu}
             >
               <img
-                src="/src/assets/images/Group.png"
+                src={logo}
                 alt="Enaaya"
                 className="h-6 min-[414px]:h-8 sm:h-10 lg:h-12 w-auto"
               />
