@@ -25,12 +25,18 @@ const InfoBar = () => {
               <h3 className="font-josefin text-[20px] font-semibold mb-1 text-[#295C51] leading-none">
                 Contact Us
               </h3>
-              <p className="font-josefin text-[16px] text-[#666666] leading-[1.3] m-0 font-normal">
+              <a
+                href="tel:+919274733288"
+                className="font-josefin text-[16px] text-[#666666] leading-[1.3] m-0 font-normal no-underline hover:text-[#295C51] transition-colors duration-300"
+              >
                 {contactInfo.phone}
-              </p>
-              <p className="font-josefin text-[13px] md:text-[16px] text-[#666666] leading-[1.3] m-0 font-normal whitespace-nowrap">
+              </a>
+              <a
+                href="mailto:enaayahomeopathy@gmail.com"
+                className="font-josefin text-[13px] md:text-[16px] text-[#666666] leading-[1.3] m-0 font-normal whitespace-nowrap no-underline hover:text-[#295C51] transition-colors duration-300"
+              >
                 {contactInfo.email}
-              </p>
+              </a>
             </div>
           </div>
 
