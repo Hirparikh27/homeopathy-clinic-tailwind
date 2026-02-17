@@ -96,45 +96,47 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="w-full overflow-x-auto scrollbar-none lg:pb-8 px-4 lg:px-0">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:max-w-[1190px] md:mx-auto lg:flex lg:flex-row lg:gap-6 lg:pl-[calc((100%-1190px)/2)] lg:pr-20 lg:max-w-none">
-          {services.map((service, index) => (
-            <motion.div
-              className="w-full md:w-auto lg:w-[260px] shrink-0"
-              key={service.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="relative w-full h-[326.37px] rounded-[140px_140px_8px_8px] border-[2px] border-white shadow-[0px_0.93px_1.86px_-0.93px_#0000001A,0px_3.93px_2.79px_0px_#0000001A] overflow-hidden group transition-transform duration-300 hover:-translate-y-[5px]">
-                <img
-                  src={
-                    typeof serviceImages[service.id] === "string"
-                      ? serviceImages[service.id]
-                      : serviceImages[service.id]
-                  }
-                  alt={service.title}
-                  className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+      <div className="max-w-[1190px] mx-auto px-4 lg:px-0">
+        <div className="overflow-x-auto scrollbar-none pb-4 lg:pb-8">
+          <div className="flex flex-row gap-6">
+            {services.map((service, index) => (
+              <motion.div
+                className="w-[220px] md:w-[240px] lg:w-[260px] shrink-0"
+                key={service.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="relative w-full h-[326.37px] rounded-[140px_140px_8px_8px] border-[2px] border-white shadow-[0px_0.93px_1.86px_-0.93px_#0000001A,0px_3.93px_2.79px_0px_#0000001A] overflow-hidden group transition-transform duration-300 hover:-translate-y-[5px]">
+                  <img
+                    src={
+                      typeof serviceImages[service.id] === "string"
+                        ? serviceImages[service.id]
+                        : serviceImages[service.id]
+                    }
+                    alt={service.title}
+                    className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
 
-                {/* Hover Description Overlay */}
-                <div className="absolute inset-0 bg-[#1A1A1A]/90 flex items-center justify-center text-center p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10 pb-[60px]">
-                  <div className="text-white font-josefin text-[16px] leading-[1.2] font-normal px-2 drop-shadow-md flex flex-col gap-1 items-center justify-center h-full">
-                    {service.description.split(",").map((line, i) => (
-                      <span key={i} className="block">
-                        {line.trim()}
-                      </span>
-                    ))}
+                  {/* Hover Description Overlay */}
+                  <div className="absolute inset-0 bg-[#1A1A1A]/90 flex items-center justify-center text-center p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10 pb-[60px]">
+                    <div className="text-white font-josefin text-[16px] leading-[1.2] font-normal px-2 drop-shadow-md flex flex-col gap-1 items-center justify-center h-full">
+                      {service.description.split(",").map((line, i) => (
+                        <span key={i} className="block">
+                          {line.trim()}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="absolute  bottom-0 left-0 w-full bg-primary text-white p-[15px_10px] text-center font-josefin text-[0.95rem] font-semibold z-20 transition-colors duration-300 group-hover:bg-primary-dark">
+                    {service.title}
                   </div>
                 </div>
-
-                <div className="absolute  bottom-0 left-0 w-full bg-primary text-white p-[15px_10px] text-center font-josefin text-[0.95rem] font-semibold z-20 transition-colors duration-300 group-hover:bg-primary-dark">
-                  {service.title}
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

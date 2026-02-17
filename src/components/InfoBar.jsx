@@ -28,7 +28,7 @@ const InfoBar = () => {
               <p className="font-josefin text-[16px] text-[#666666] leading-[1.3] m-0 font-normal">
                 {contactInfo.phone}
               </p>
-              <p className="font-josefin text-[16px] text-[#666666] leading-[1.3] m-0 font-normal break-all">
+              <p className="font-josefin text-[13px] md:text-[16px] text-[#666666] leading-[1.3] m-0 font-normal whitespace-nowrap">
                 {contactInfo.email}
               </p>
             </div>
@@ -58,10 +58,10 @@ const InfoBar = () => {
               <h3 className="font-josefin text-[20px] font-semibold mb-1 text-[#295C51] leading-none">
                 Opening Hours
               </h3>
-              <p className="font-josefin text-[16px] text-[#666666] leading-[1.3] m-0 font-normal md:whitespace-nowrap">
+              <p className="font-josefin text-[16px] text-[#666666] leading-[1.3] m-0 font-normal whitespace-nowrap">
                 {contactInfo.openingHours.weekdays}
               </p>
-              <p className="font-josefin text-[16px] text-[#666666] leading-[1.3] m-0 font-normal md:whitespace-nowrap">
+              <p className="font-josefin text-[16px] text-[#666666] leading-[1.3] m-0 font-normal whitespace-nowrap">
                 {contactInfo.openingHours.special}
               </p>
             </div>
