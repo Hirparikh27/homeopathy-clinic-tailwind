@@ -53,8 +53,8 @@ const Trust = () => {
           </div>
           <div className="text-left flex flex-col max-w-[470px] lg:text-left lg:items-start">
             <p className="font-josefin text-[18px] font-normal leading-[1.3] text-[#1A1A1A99] mb-6 lg:text-[24px] lg:text-[#666666] lg:leading-[1.3] lg:text-left">
-              Experience the difference of personalized, holistic care Lorem
-              Ipsum Donor Sit
+              Because trust is earned through care, and results speak for
+              themselves
             </p>
             <Link
               to="footer"

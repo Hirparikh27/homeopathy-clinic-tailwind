@@ -99,7 +99,7 @@ const Footer = () => {
               <h3 className="font-josefin font-bold text-[18px] sm:text-[20px] text-[#1A1A1A] mb-4 sm:mb-6">
                 Quick Links
               </h3>
-              <ul className="flex flex-col gap-[16px] sm:gap-[24px]">
+              <ul className="flex flex-col gap-[16px] sm:gap-[16px]">
                 <li>
                   <Link
                     to="home"
@@ -124,13 +124,24 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    to="about"
+                    to="trust"
                     smooth={true}
                     duration={500}
                     offset={-80}
                     className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#666666] hover:text-[#E8B086] transition-colors duration-300 cursor-pointer no-underline"
                   >
-                    About
+                    Why Us?
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="about"
+                    smooth={true}
+                    duration={500}
+                    offset={-120}
+                    className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#666666] hover:text-[#E8B086] transition-colors duration-300 cursor-pointer no-underline"
+                  >
+                    Our Dr
                   </Link>
                 </li>
                 <li>
@@ -191,7 +202,7 @@ const Footer = () => {
                     Clinic Timings:
                   </span>
                   <span className="font-josefin font-normal text-[16px] sm:text-[18px] lg:text-[20px] text-[#1A1A1A] whitespace-nowrap">
-                    Mon to Sat 10:30 to 7:30 <br /> Sun 10:30 to 1:30
+                    Mon to Sat 10:30 to 7:30 <br /> Sun- Appointment based only
                   </span>
                 </div>
               </div>

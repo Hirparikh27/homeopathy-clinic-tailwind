@@ -40,7 +40,7 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="pt-10 pb-20 bg-white">
+    <section id="faq" className="pt-10 pb-40 bg-white">
       <div className="max-w-[1190px] mx-auto px-4 lg:px-0">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-20">
           {/* Left Side: Header Content */}
