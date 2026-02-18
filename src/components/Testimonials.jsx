@@ -154,6 +154,7 @@ const Card = ({ item, onPlay }) => {
             className="w-full h-full object-cover pointer-events-none"
             playsInline
             muted
+            preload="metadata"
           />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">

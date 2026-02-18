@@ -114,6 +114,7 @@ const Trust = () => {
               src={clinicImg}
               alt="Clinic Entrance"
               className="w-full h-full object-cover object-top"
+              loading="lazy"
             />
           </motion.div>
 

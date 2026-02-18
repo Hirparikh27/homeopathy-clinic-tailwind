@@ -24,6 +24,7 @@ const About = () => {
                   alt="Dr. Bhavya Koladiya"
                   className="w-full h-auto sm:h-[450px] lg:h-[445px] rounded-2xl block object-cover object-top"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
+                  loading="lazy"
                 />
                 <div className="font-caveat text-center text-[27.36px] font-bold leading-[1.1] text-[#295C51] pb-1">
                   Dr. Bhavya Koladiya
@@ -96,6 +97,7 @@ const About = () => {
               src={leafImg}
               alt=""
               className="w-full h-auto brightness-0 invert"
+              loading="lazy"
             />
           </div>
           <div className="absolute w-[300px] opacity-60 pointer-events-none z-[1] bottom-[-50px] left-[-120px] rotate-[180deg] scale-y-[-1]">
@@ -103,6 +105,7 @@ const About = () => {
               src={leafImg}
               alt=""
               className="w-full h-auto brightness-0 invert"
+              loading="lazy"
             />
           </div>
         </div>

@@ -62,6 +62,7 @@ const ClinicGallery = () => {
                   src={entranceImg}
                   alt="Clinic Entrance"
                   className="w-full h-[250px] sm:h-[300px] lg:h-full object-cover rounded-[8px]"
+                  loading="lazy"
                 />
               </div>
             </motion.div>
@@ -83,6 +84,7 @@ const ClinicGallery = () => {
                     src={img.src}
                     alt={img.alt}
                     className="w-full h-full object-cover rounded-[8px]"
+                    loading="lazy"
                   />
                 </div>
               </motion.div>
