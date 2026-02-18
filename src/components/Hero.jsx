@@ -33,6 +33,7 @@ const Hero = () => {
               <Link
                 to="footer"
                 smooth={true}
+                offset={-80}
                 className="w-[143px] h-[48px] px-6 bg-white text-[#295C51] flex items-center justify-center gap-2 rounded-[72px] font-josefin font-bold text-[18px] leading-none cursor-pointer hover:opacity-90 hover:-translate-y-0.5 transition-all duration-300 no-underline"
               >
                 Contact Us
