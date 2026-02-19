@@ -97,11 +97,11 @@ const Services = () => {
       </div>
 
       <div className="max-w-[1190px] mx-auto px-4 lg:px-0">
-        <div className="overflow-x-auto scrollbar-none pb-4 lg:pb-8 touch-pan-x">
-          <div className="flex flex-row gap-6">
+        <div className="overflow-x-auto scrollbar-none pb-4 lg:pb-8 lg:overflow-visible touch-pan-x">
+          <div className="flex flex-row gap-6 lg:flex-wrap lg:justify-center">
             {services.map((service, index) => (
               <motion.div
-                className="w-[220px] md:w-[240px] shrink-0"
+                className="w-[220px] md:w-[240px] lg:w-[calc(25%-18px)] shrink-0 lg:shrink"
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
