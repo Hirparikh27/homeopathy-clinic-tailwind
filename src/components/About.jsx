@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import capIcon from "../assets/images/cap.svg";
 import doctorImg from "../assets/images/Bhavya.png";
 import leafImg from "../assets/images/leaf.png";
+import LazyImage from "./LazyImage";
 
 const About = () => {
   return (
@@ -19,12 +20,13 @@ const About = () => {
               viewport={{ once: true }}
             >
               <div className="bg-white p-2 rounded-[16px] relative shadow-[0_4.89px_19.56px_0_rgba(0,0,0,0.08)] flex flex-col gap-2 min-h-0 lg:h-[508px]">
-                <img
+                <LazyImage
                   src={doctorImg}
                   alt="Dr. Bhavya Koladiya"
-                  className="w-full h-auto sm:h-[450px] lg:h-[445px] rounded-2xl block object-cover object-top"
-                  style={{ imageRendering: "-webkit-optimize-contrast" }}
-                  loading="lazy"
+                  title="Dr. Bhavya Koladiya"
+                  wrapperClass="rounded-2xl"
+                  skeletonClass="rounded-2xl"
+                  className="w-full h-auto sm:h-[450px] lg:h-[445px] rounded-2xl object-cover object-top"
                 />
                 <div className="font-caveat text-center text-[27.36px] font-bold leading-[1.1] text-[#295C51] pb-1">
                   Dr. Bhavya Koladiya

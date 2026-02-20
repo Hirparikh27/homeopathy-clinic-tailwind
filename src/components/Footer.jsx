@@ -26,6 +26,7 @@ const Footer = () => {
               <img
                 src={logoImg}
                 alt="Enaaya"
+                title="Enaaya"
                 className="h-8 sm:h-10 lg:h-12 w-auto"
               />
               <div className="flex flex-col leading-none">
@@ -46,11 +47,13 @@ const Footer = () => {
                 href="https://wa.me/919274733288"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="WhatsApp"
                 className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] rounded-full border border-[#295C51]/20 flex items-center justify-center transition-all duration-300 hover:bg-[#295C51] group"
               >
                 <img
                   src={whatsappIcon}
                   alt="WhatsApp"
+                  title="WhatsApp"
                   className="w-auto h-5 sm:h-8 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
                 />
               </a>
@@ -58,11 +61,13 @@ const Footer = () => {
                 href="https://www.instagram.com/enaaya_homeopathy?igsh=MTljMHY1dHVkOGwzcA%3D%3D&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Instagram"
                 className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] rounded-full border border-[#295C51]/20 flex items-center justify-center transition-all duration-300 hover:bg-[#295C51] group"
               >
                 <img
                   src={instagramIcon}
                   alt="Instagram"
+                  title="Instagram"
                   className="w-auto h-5 sm:h-8 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
                 />
               </a>
@@ -70,11 +75,13 @@ const Footer = () => {
                 href="https://www.facebook.com/share/1Dpn15yBoi/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Facebook"
                 className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] rounded-full border border-[#295C51]/20 flex items-center justify-center transition-all duration-300 hover:bg-[#295C51] group"
               >
                 <img
                   src={facebookIcon}
                   alt="Facebook"
+                  title="Facebook"
                   className="w-auto h-5 sm:h-8 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
                 />
               </a>
@@ -82,11 +89,13 @@ const Footer = () => {
                 href="https://youtube.com/@drbhavyakumarkoladiya?si=BzCQs4TZG82AudcL"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="YouTube"
                 className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] rounded-full border border-[#295C51]/20 flex items-center justify-center transition-all duration-300 hover:bg-[#295C51] group"
               >
                 <img
                   src={youtubeIcon}
                   alt="YouTube"
+                  title="YouTube"
                   className="w-auto h-5 sm:h-8 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
                 />
               </a>

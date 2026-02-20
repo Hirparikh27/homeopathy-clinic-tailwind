@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import homeopathyImg from "../assets/images/what.png";
+import LazyImage from "./LazyImage";
 
 const Homeopathy = () => {
   const highlights = [
@@ -49,10 +50,24 @@ const Homeopathy = () => {
               viewport={{ once: true }}
             >
               <div className="relative z-10">
-                <img
+                {/* <img
                   src={homeopathyImg}
                   alt="Homeopathy Remedies"
                   className="w-full max-w-[450px] md:max-w-none md:h-auto rounded-2xl"
+                /> */}
+                <LazyImage
+                  src={homeopathyImg}
+                  alt="Homeopathy Remedies"
+                  title="Homeopathy Remedies"
+                  wrapperClass="
+      w-full
+      max-w-[450px]
+      md:max-w-none
+      rounded-2xl
+      overflow-hidden
+    "
+                  className="object-contain"
+                  skeletonClass="bg-gray-200 rounded-2xl"
                 />
               </div>
             </motion.div>

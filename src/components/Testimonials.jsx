@@ -82,6 +82,65 @@ const testimonialsData = [
   ],
 ];
 
+// const VideoPreview = ({ src, onClick }) => {
+//   const [loaded, setLoaded] = React.useState(false);
+
+//   return (
+//     <div onClick={onClick} className="relative w-full h-full cursor-pointer">
+//       <video
+//         src={src}
+//         muted
+//         playsInline
+//         preload="metadata"
+//         onLoadedData={() => setLoaded(true)}
+//         className={`w-full h-full object-cover transition-opacity duration-300 ${
+//           loaded ? "opacity-100" : "opacity-0"
+//         }`}
+//       />
+
+//       {!loaded && <div className="absolute inset-0 bg-[#295C51]" />}
+
+//       <div className="absolute inset-0 flex items-center justify-center">
+//         <div className="w-12 h-12 bg-white/30 backdrop-blur rounded-full flex items-center justify-center text-white text-xl">
+//           ▶
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+const VideoPreview = ({ src, onClick }) => {
+  const [ready, setReady] = React.useState(false);
+
+  return (
+    <div
+      onClick={onClick}
+      className="relative w-full h-full rounded-2xl overflow-hidden cursor-pointer"
+    >
+      {/* Skeleton */}
+      {!ready && <div className="absolute inset-0 skeleton-shimmer" />}
+
+      {/* Video */}
+      <video
+        src={src}
+        muted
+        playsInline
+        preload="metadata"
+        onCanPlay={() => setReady(true)}
+        className={`w-full h-full object-cover transition-opacity duration-300 ${
+          ready ? "opacity-100" : "opacity-0"
+        }`}
+      />
+
+      {/* Play Icon */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="w-12 h-12 rounded-full bg-white/30 backdrop-blur flex items-center justify-center text-white text-xl">
+          ▶
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const StarRating = () => (
   <div className="flex gap-1 mb-4">
     {[...Array(5)].map((_, i) => (
@@ -149,12 +208,9 @@ const Card = ({ item, onPlay }) => {
           className="w-full h-full relative group cursor-pointer"
           onClick={() => onPlay(item.videoSource)}
         >
-          <video
+          <VideoPreview
             src={item.videoSource}
-            className="w-full h-full object-cover pointer-events-none"
-            playsInline
-            muted
-            preload="metadata"
+            onClick={() => onPlay(item.videoSource)}
           />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">

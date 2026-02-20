@@ -115,3 +115,34 @@
   animation: pulse-green 2s infinite;
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: -150% 0;
+  }
+  100% {
+    background-position: 150% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    110deg,
+    #295C51 25%,
+    #4a8c7c 37%,
+    #295C51 63%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2.4s infinite ease-in-out;
+}
+
+.skeleton-shimmer-image {
+  background: linear-gradient(
+    110deg,
+    #e5e7eb 25%,   
+    #f3f4f6 37%,  
+    #e5e7eb 63%
+
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2.4s infinite ease-in-out;
+}

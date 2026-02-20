@@ -4,6 +4,7 @@ import entranceImg from "../assets/images/Enterance.png";
 import officeImg from "../assets/images/main-office.png";
 import cornerImg from "../assets/images/main-office-corner.png";
 import recepImg from "../assets/images/recepnist.png";
+import LazyImage from "./LazyImage";
 
 const ClinicGallery = () => {
   const subImages = [
@@ -58,11 +59,18 @@ const ClinicGallery = () => {
               viewport={{ once: true }}
             >
               <div className="bg-white p-4 rounded-[12px] shadow-[0_3.62px_14.47px_0_rgba(0,0,0,0.08)] border border-white h-full">
-                <img
+                {/* <img
                   src={entranceImg}
                   alt="Clinic Entrance"
                   className="w-full h-[250px] sm:h-[300px] lg:h-full object-cover rounded-[8px]"
                   loading="lazy"
+                /> */}
+                <LazyImage
+                  src={entranceImg}
+                  alt="Clinic Entrance"
+                  title="Clinic Entrance"
+                  className="w-full h-[250px] sm:h-[300px] lg:h-full object-cover rounded-[8px]"
+                  skeletonClass="rounded-[8px]"
                 />
               </div>
             </motion.div>
@@ -80,11 +88,18 @@ const ClinicGallery = () => {
                 viewport={{ once: true }}
               >
                 <div className="bg-white p-4 rounded-[12px] shadow-[0_3.62px_14.47px_0_rgba(0,0,0,0.08)] border border-white h-full">
-                  <img
+                  {/* <img
                     src={img.src}
                     alt={img.alt}
                     className="w-full h-full object-cover rounded-[8px]"
                     loading="lazy"
+                  /> */}
+                  <LazyImage
+                    src={img.src}
+                    alt={img.alt}
+                    title={img.alt}
+                    className="w-full h-full object-cover rounded-[8px]"
+                    skeletonClass="rounded-[8px]"
                   />
                 </div>
               </motion.div>
