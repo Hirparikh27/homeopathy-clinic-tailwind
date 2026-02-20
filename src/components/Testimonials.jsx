@@ -6,6 +6,7 @@ import video2 from "../assets/videos/Review Video 2 (2).mp4";
 import video3 from "../assets/videos/Review Video 3.mp4";
 import video4 from "../assets/videos/Review Video 4.mp4";
 import video5 from "../assets/videos/Review Video 5.mp4";
+import posterImg1 from "../assets/images/poster-img-1.png";
 
 const testimonialsData = [
   // Row 1
@@ -108,33 +109,30 @@ const testimonialsData = [
 //     </div>
 //   );
 // };
-const VideoPreview = ({ onClick, patient }) => {
+const VideoPreview = ({ onClick }) => {
   return (
     <div
       onClick={onClick}
-      className="relative w-full h-full rounded-2xl overflow-hidden cursor-pointer bg-[#295C51] group"
+      className="relative w-full h-full rounded-2xl overflow-hidden cursor-pointer group"
     >
-      {/* Dynamic Placeholder Aesthetic */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#295C51] via-[#3a7d6e] to-[#295C51] flex flex-col items-center justify-center p-6 text-center">
-        <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center mb-4 transition-transform duration-500 group-hover:scale-110 border border-white/20">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            className="ml-1"
-          >
-            <path d="M8 5V19L19 12L8 5Z" fill="white" />
+      {/* Poster Image */}
+      <img
+        src={posterImg1}
+        alt="Video Testimonial Poster"
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+
+      {/* Overlay to ensure play icon visibility */}
+      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+
+      {/* Play Icon Container */}
+      <div className="absolute inset-0 flex items-center justify-center p-6 text-center">
+        <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center transition-transform duration-500 group-hover:scale-110 border border-white/20">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M8.5 5V19L19.5 12L8.5 5Z" fill="white" />
           </svg>
         </div>
-        <p className="font-josefin text-white/90 text-sm font-medium tracking-wide uppercase">
-          Video Testimonial
-        </p>
-        <p className="font-cooper text-white text-lg mt-1">{patient}</p>
       </div>
-
-      {/* Hover Overlay */}
-      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
     </div>
   );
 };
@@ -153,6 +151,17 @@ const StarRating = () => (
 );
 
 const VideoModal = ({ videoSource, onClose }) => {
+  React.useEffect(() => {
+    if (videoSource) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    };
+  }, [videoSource]);
+
   if (!videoSource) return null;
 
   return (
@@ -202,10 +211,7 @@ const Card = ({ item, onPlay }) => {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
       >
-        <VideoPreview
-          patient={item.patient}
-          onClick={() => onPlay(item.videoSource)}
-        />
+        <VideoPreview onClick={() => onPlay(item.videoSource)} />
       </motion.div>
     );
   }

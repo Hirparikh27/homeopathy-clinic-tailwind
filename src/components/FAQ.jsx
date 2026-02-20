@@ -40,7 +40,7 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="pt-10 pb-40 bg-white">
+    <section id="faq" className="pt-10 pb-20 bg-white">
       <div className="max-w-[1190px] mx-auto px-4 lg:px-0">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-20">
           {/* Left Side: Header Content */}
@@ -58,16 +58,14 @@ const FAQ = () => {
           </div>
 
           {/* Right Side: Accordion */}
-          <div className="lg:w-[60%] flex flex-col">
+          <div className="lg:w-[60%] flex flex-col gap-2">
             {faqs.map((item, index) => (
               <div
                 key={index}
-                className={`transition-all duration-300 ${
+                className={`overflow-hidden transition-colors duration-300 border ${
                   clicked === index
-                    ? "bg-[#FAF5F0] rounded-[24px] border border-[#E8B086] my-3 overflow-hidden"
-                    : clicked === index - 1
-                      ? "bg-transparent border-b-0"
-                      : "bg-transparent border-b border-[#E6E6E6] last:border-0"
+                    ? "bg-[#FAF5F0] rounded-[24px] border-[#E8B086]"
+                    : "bg-transparent border-transparent border-b-[#E6E6E6] last:border-b-0"
                 }`}
               >
                 <div

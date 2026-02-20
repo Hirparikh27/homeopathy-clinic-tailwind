@@ -36,7 +36,7 @@ const ClinicGallery = () => {
                 Step into care you can truly rely on.
               </p>
               <a
-                href="https://www.google.com/maps/place/Enaaya+Homeopathy+Clinic+%7C+Dr+Bhavya+Koladiya+(B.H.M.S)/@23.0559378,72.5255543,17z/data=!3m1!4b1!4m6!3m5!1s0x395e856564bfe46d:0xa8500db9268a3808!8m2!3d23.0559329!4d72.5281292!16s%2Fg%2F11ywjrtq10?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D"
+                href="https://maps.app.goo.gl/qmbzfaMBJPSPkY9u8?g_st=ic"
                 target="_blank"
                 rel="noopener noreferrer"
               >
