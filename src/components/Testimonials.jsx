@@ -7,6 +7,10 @@ import video3 from "../assets/videos/Review Video 3.mp4";
 import video4 from "../assets/videos/Review Video 4.mp4";
 import video5 from "../assets/videos/Review Video 5.mp4";
 import posterImg1 from "../assets/images/poster-img-1.png";
+import posterImg2 from "../assets/images/poster-img-2.png";
+import posterImg3 from "../assets/images/poster-img-3.png";
+import posterImg4 from "../assets/images/poster-img-4.png";
+import posterImg5 from "../assets/images/poster-img-5.png";
 
 const testimonialsData = [
   // Row 1
@@ -20,6 +24,7 @@ const testimonialsData = [
     {
       type: "video",
       videoSource: video1,
+      posterImg: posterImg1,
       patient: "Patient",
       condition: "Success Story",
     },
@@ -32,6 +37,7 @@ const testimonialsData = [
     {
       type: "video",
       videoSource: video2,
+      posterImg: posterImg2,
       patient: "Patient",
       condition: "Success Story",
     },
@@ -47,6 +53,7 @@ const testimonialsData = [
     {
       type: "video",
       videoSource: video3,
+      posterImg: posterImg3,
       patient: "Patient",
       condition: "Success Story",
     },
@@ -59,6 +66,7 @@ const testimonialsData = [
     {
       type: "video",
       videoSource: video4,
+      posterImg: posterImg4,
       patient: "Patient",
       condition: "Success Story",
     },
@@ -71,6 +79,7 @@ const testimonialsData = [
     {
       type: "video",
       videoSource: video5,
+      posterImg: posterImg5,
       patient: "Patient",
       condition: "Success Story",
     },
@@ -109,7 +118,7 @@ const testimonialsData = [
 //     </div>
 //   );
 // };
-const VideoPreview = ({ onClick }) => {
+const VideoPreview = ({ posterImg, onClick }) => {
   return (
     <div
       onClick={onClick}
@@ -117,7 +126,7 @@ const VideoPreview = ({ onClick }) => {
     >
       {/* Poster Image */}
       <img
-        src={posterImg1}
+        src={posterImg}
         alt="Video Testimonial Poster"
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
@@ -127,7 +136,7 @@ const VideoPreview = ({ onClick }) => {
 
       {/* Play Icon Container */}
       <div className="absolute inset-0 flex items-center justify-center p-6 text-center">
-        <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center transition-transform duration-500 group-hover:scale-110 border border-white/20">
+        <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center transition-transform duration-500 group-hover:scale-110 border border-white/20">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M8.5 5V19L19.5 12L8.5 5Z" fill="white" />
           </svg>
@@ -211,7 +220,10 @@ const Card = ({ item, onPlay }) => {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
       >
-        <VideoPreview onClick={() => onPlay(item.videoSource)} />
+        <VideoPreview
+          posterImg={item.posterImg}
+          onClick={() => onPlay(item.videoSource)}
+        />
       </motion.div>
     );
   }

@@ -52,7 +52,7 @@ const ClinicGallery = () => {
 
             {/* Right: Main Image Card */}
             <motion.div
-              className="w-full xl:w-[579px] xl:h-[370px]"
+              className="w-full xl:w-[579px] md:h-[600px] xl:h-[370px]"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -69,7 +69,7 @@ const ClinicGallery = () => {
                   src={entranceImg}
                   alt="Clinic Entrance"
                   title="Clinic Entrance"
-                  className="w-full h-auto xl:h-full object-contain xl:object-cover rounded-[8px]"
+                  className="w-full h-full object-cover rounded-[8px]"
                   skeletonClass="rounded-[8px]"
                 />
               </div>
@@ -77,11 +77,11 @@ const ClinicGallery = () => {
           </div>
 
           {/* Bottom Row: 3 Images Row */}
-          <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 sm:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-3 gap-6 sm:gap-10">
             {subImages.map((img, index) => (
               <motion.div
                 key={index}
-                className="w-full h-auto xl:h-[356px]"
+                className="w-full md:h-[300px] xl:h-[356px]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -92,7 +92,7 @@ const ClinicGallery = () => {
                     src={img.src}
                     alt={img.alt}
                     title={img.alt}
-                    className="w-full h-auto xl:h-full object-contain xl:object-cover rounded-[8px]"
+                    className="w-full h-full object-cover rounded-[8px]"
                     skeletonClass="rounded-[8px]"
                   />
                 </div>
