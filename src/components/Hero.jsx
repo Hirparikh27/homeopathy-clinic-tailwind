@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import doctorImg from "../assets/images/Bhavya1.png";
+import LazyImage from "./LazyImage";
 
 const Hero = () => {
   return (
@@ -47,10 +48,26 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <img
+            {/* <img
               src={doctorImg}
               alt="Dr. Bhavya Koladiya"
               className="w-full max-w-[240px] sm:max-w-[280px] md:max-w-[340px] h-auto object-cover rounded-[14.98px_44.93px_14.98px_44.93px] lg:max-w-[365.04px]"
+            /> */}
+            <LazyImage
+              src={doctorImg}
+              alt="Dr. Bhavya Koladiya"
+              title="Dr. Bhavya Koladiya"
+              wrapperClass="
+      w-full
+      max-w-[240px]
+      sm:max-w-[280px]
+      md:max-w-[340px]
+      lg:max-w-[365.04px]
+      rounded-[14.98px_44.93px_14.98px_44.93px]
+      overflow-hidden
+    "
+              className="object-cover"
+              skeletonClass="bg-gray-200 animate-pulse rounded-[14.98px_44.93px_14.98px_44.93px]"
             />
           </motion.div>
         </div>

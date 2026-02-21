@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-
 import pcIcon from "../assets/images/PC.svg";
 import scIcon from "../assets/images/SC.svg";
 import neIcon from "../assets/images/NE.svg";
 import tcIcon from "../assets/images/TC.svg";
 import clinicImg from "../assets/images/clinic.png"; // Assuming path based on previous file usage
+import LazyImage from "./LazyImage";
 
 const Trust = () => {
   const trustFeatures = [
@@ -44,7 +44,6 @@ const Trust = () => {
     <section id="trust" className="pt-10 pb-20 bg-white md:pb-16">
       <div className="max-w-[1190px] mx-auto px-4 lg:px-0">
         {/* Header Section */}
-        {/* Header Section */}
         <div className="flex flex-col items-start gap-5 mb-10 w-full md:flex-row md:justify-between md:items-start md:gap-0 md:mb-[88px]">
           <div className="text-left flex flex-col max-w-[500px]">
             <h2 className="font-cooper text-[32px] font-normal leading-[1.2] text-[#1A1A1A] lg:text-[44px]">
@@ -53,7 +52,7 @@ const Trust = () => {
           </div>
           <div className="text-left flex flex-col max-w-[470px] lg:text-left lg:items-start">
             <p className="font-josefin text-[18px] font-normal leading-[1.3] text-[#1A1A1A99] mb-6 lg:text-[24px] lg:text-[#666666] lg:leading-[1.3] lg:text-left">
-              Because trust is earned through care, and results speak for
+              Because trust is earned through care, and results speak for
               themselves
             </p>
             <Link
@@ -110,11 +109,19 @@ const Trust = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <img
+            {/* <img
               src={clinicImg}
               alt="Clinic Entrance"
               className="w-full h-full object-cover object-top"
               loading="lazy"
+            /> */}
+            <LazyImage
+              src={clinicImg}
+              alt="Clinic Entrance"
+              title="Clinic Entrance"
+              wrapperClass="w-full h-full"
+              className="object-cover object-top"
+              skeletonClass="bg-gray-200"
             />
           </motion.div>
 

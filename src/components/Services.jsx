@@ -1,6 +1,16 @@
 import React from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
+import bonesImg from "../assets/images/Bones & Muscles Issues.png";
+import digestiveImg from "../assets/images/Gastric & Digestive Issues.png";
+import respiratoryImg from "../assets/images/Respiratory Issues.png";
+import kidneyImg from "../assets/images/Kidney Issues.png";
+import childImg from "../assets/images/Child Issues.png";
+import femaleImg from "../assets/images/Female Issues.png";
+import skinImg from "../assets/images/Skin & Hair Issues.png";
+import lifestyleImg from "../assets/images/Life Style Disorders.png";
+import LazyImage from "./LazyImage";
+
 const services = [
   {
     id: 1,
@@ -48,14 +58,6 @@ const services = [
     description: "Diabetes / BP / Thyroid, Migraine / Hormonal Issues",
   },
 ];
-import bonesImg from "../assets/images/Bones & Muscles Issues.png";
-import digestiveImg from "../assets/images/Gastric & Digestive Issues.png";
-import respiratoryImg from "../assets/images/Respiratory Issues.png";
-import kidneyImg from "../assets/images/Kidney Issues.png";
-import childImg from "../assets/images/Child Issues.png";
-import femaleImg from "../assets/images/Female Issues.png";
-import skinImg from "../assets/images/Skin & Hair Issues.png";
-import lifestyleImg from "../assets/images/Life Style Disorders.png";
 
 const serviceImages = {
   1: bonesImg,
@@ -109,14 +111,13 @@ const Services = () => {
                 viewport={{ once: true }}
               >
                 <div className="relative w-full h-[326.37px] rounded-[140px_140px_8px_8px] border-[2px] border-white shadow-[0px_0.93px_1.86px_-0.93px_#0000001A,0px_3.93px_2.79px_0px_#0000001A] overflow-hidden group transition-transform duration-300 hover:-translate-y-[5px]">
-                  <img
-                    src={
-                      typeof serviceImages[service.id] === "string"
-                        ? serviceImages[service.id]
-                        : serviceImages[service.id]
-                    }
+                  <LazyImage
+                    src={serviceImages[service.id]}
                     alt={service.title}
-                    className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    title={service.title}
+                    wrapperClass="w-full h-full rounded-[140px_140px_8px_8px]"
+                    skeletonClass="rounded-[140px_140px_8px_8px]"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
 
                   {/* Hover Description Overlay */}
