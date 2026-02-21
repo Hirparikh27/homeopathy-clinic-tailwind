@@ -41,24 +41,24 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="pt-10 pb-20 bg-white">
-      <div className="max-w-[1190px] mx-auto px-4 lg:px-0">
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-20">
+      <div className="max-w-[1190px] mx-auto px-4 md:px-14 xl:px-0">
+        <div className="flex flex-col xl:flex-row gap-10 xl:gap-20">
           {/* Left Side: Header Content */}
-          <div className="lg:w-[40%] text-center lg:text-left flex flex-col items-center lg:items-start">
-            <div className="bg-[#E8B086] text-[#5F2900] text-[18px] px-6 py-2 rounded-full inline-block font-josefin font-bold mb-6">
+          <div className="xl:w-[40%] text-center xl:text-left flex flex-col items-center xl:items-start">
+            <div className="bg-[#E8B086] text-[#5F2900] text-[18px] md:text-[20px] px-6 py-2 rounded-full inline-block font-josefin font-bold mb-6">
               Common Questions
             </div>
-            <h2 className="font-cooper text-[36px] md:text-[44px] font-normal leading-[1.1] text-[#1A1A1A] mb-6">
-              Your Questions <br />
+            <h2 className="font-cooper text-[36px] md:text-[44px] lg:text-[50px] font-normal leading-[1.1] text-[#1A1A1A] mb-6">
+              Your Questions <br className="md:hidden xl:block" />
               Answered
             </h2>
-            <p className="font-josefin text-[18px] text-[#666666] leading-[1.3] max-w-[300px] mx-auto lg:mx-0">
+            <p className="font-josefin text-[18px] md:text-[22px] text-[#666666] leading-[1.3] max-w-[300px] md:max-w-[400px] mx-auto xl:mx-0">
               Find answers to common questions about homeopathy
             </p>
           </div>
 
           {/* Right Side: Accordion */}
-          <div className="lg:w-[60%] flex flex-col gap-2">
+          <div className="xl:w-[60%] flex flex-col gap-2">
             {faqs.map((item, index) => (
               <div
                 key={index}
@@ -69,18 +69,18 @@ const FAQ = () => {
                 }`}
               >
                 <div
-                  className="p-6 flex justify-between items-center cursor-pointer"
+                  className="p-6 md:p-8 flex justify-between items-center cursor-pointer"
                   onClick={() => toggle(index)}
                 >
-                  <div className="flex gap-4">
-                    <span className="font-josefin text-lg font-bold text-[#1A1A1A]">
+                  <div className="flex gap-4 md:gap-6 items-center">
+                    <span className="font-josefin text-[18px] md:text-[24px] font-bold text-[#1A1A1A]">
                       {index + 1}.
                     </span>
-                    <h3 className="font-josefin text-lg font-bold text-[#1A1A1A] m-0">
+                    <h3 className="font-josefin text-[18px] md:text-[24px] font-bold text-[#1A1A1A] m-0 pb-0.5">
                       {item.question}
                     </h3>
                   </div>
-                  <span className="text-[#295C51] text-xl font-light">
+                  <span className="text-[#295C51] text-[24px] md:text-[36px] font-light leading-none">
                     {clicked === index ? "−" : "+"}
                   </span>
                 </div>
@@ -93,8 +93,8 @@ const FAQ = () => {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <div className="px-6 pb-6 lg:pl-12">
-                        <p className="font-josefin text-base text-[#666666] leading-relaxed m-0">
+                      <div className="px-6 pb-6 md:px-8 md:pb-8 pt-0 xl:pl-16 md:pl-14 pl-12">
+                        <p className="font-josefin text-[16px] md:text-[20px] text-[#666666] leading-[1.5] m-0">
                           {item.answer}
                         </p>
                       </div>

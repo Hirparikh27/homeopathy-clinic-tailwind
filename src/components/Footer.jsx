@@ -10,10 +10,10 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="bg-[#FAF5F0] pt-[60px] sm:pt-[80px] pb-[30px] sm:pb-[40px]"
+      className="bg-[#FAF5F0] pt-[60px] sm:pt-[80px] pb-[30px] sm:pb-[40px] rounded-[32px] sm:rounded-b-[48px] md:rounded-[48px] lg:rounded-[48px]"
     >
-      <div className="max-w-[1190px] mx-auto px-4 lg:px-0">
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 sm:gap-12 lg:gap-0 mb-12 sm:mb-20">
+      <div className="max-w-[1190px] mx-auto px-4 md:px-14 xl:px-0">
+        <div className="flex flex-col xl:flex-row justify-between items-start gap-8 sm:gap-12 xl:gap-0 mb-12 sm:mb-20">
           {/* Brand Column */}
           <div className="flex flex-col items-start w-full lg:max-w-[531.31px] gap-[20px] sm:gap-[25px]">
             <Link
@@ -102,9 +102,9 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-12 lg:gap-[104px] w-full lg:w-auto">
+          <div className="flex flex-col md:flex-row gap-12 md:gap-20 xl:gap-[104px] w-full md:w-auto">
             {/* Quick Links Column */}
-            <div className="flex flex-col w-full lg:w-[113px]">
+            <div className="flex flex-col w-full md:w-[113px]">
               <h3 className="font-josefin font-bold text-[18px] sm:text-[20px] text-[#1A1A1A] mb-4 sm:mb-6">
                 Quick Links
               </h3>
@@ -179,7 +179,7 @@ const Footer = () => {
             </div>
 
             {/* Get in Touch Column */}
-            <div className="flex flex-col w-full lg:w-[211px]">
+            <div className="flex flex-col w-full md:w-[211px]">
               <h3 className="font-josefin font-bold text-[18px] sm:text-[20px] text-[#1A1A1A] mb-4 sm:mb-6">
                 Get in Touch
               </h3>
@@ -220,11 +220,11 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-[#295C51]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-[#295C51]/10 pt-8 flex flex-col md:flex-col lg:flex-row justify-between items-center gap-4 lg:gap-4 md:gap-6">
           <p className="font-josefin font-normal text-[14px] sm:text-[18px] lg:text-[20px] text-[#1A1A1A] text-center md:text-left">
             &copy; 2026 Enaaya Homeopathy. All Rights Reserved.
           </p>
-          <div className="flex gap-8">
+          <div className="flex gap-4 sm:gap-8 flex-col sm:flex-row items-center text-center">
             <a
               href="#"
               className="font-josefin font-normal text-[14px] sm:text-[18px] lg:text-[20px] text-[#1A1A1A] hover:text-[#E8B086] transition-colors duration-300 no-underline"

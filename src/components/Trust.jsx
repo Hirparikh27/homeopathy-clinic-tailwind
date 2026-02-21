@@ -42,7 +42,7 @@ const Trust = () => {
 
   return (
     <section id="trust" className="pt-10 pb-20 bg-white md:pb-16">
-      <div className="max-w-[1190px] mx-auto px-4 lg:px-0">
+      <div className="max-w-[1190px] mx-auto px-4 md:px-6 xl:px-0">
         {/* Header Section */}
         <div className="flex flex-col items-start gap-5 mb-10 w-full md:flex-row md:justify-between md:items-start md:gap-0 md:mb-[88px]">
           <div className="text-left flex flex-col max-w-[500px]">
@@ -68,15 +68,15 @@ const Trust = () => {
         </div>
 
         {/* Content Section: 3 Cols on Desktop, Stacked on Mobile */}
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-6">
+        <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:justify-between xl:gap-6">
           {/* Left Column */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:flex lg:flex-col lg:flex-1 lg:gap-10">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:flex xl:flex-col xl:flex-1 xl:gap-10">
             {trustFeatures
               .filter((f) => f.side === "left")
               .map((feature) => (
                 <motion.div
                   key={feature.id}
-                  className="bg-[#F8FAF2] rounded-[24px] p-6 lg:p-6 w-full flex flex-col gap-4 lg:gap-10 md:h-[229px] lg:h-[229px] md:w-full lg:w-[375.33px] lg:justify-center"
+                  className="bg-[#F8FAF2] rounded-[24px] p-6 xl:p-6 w-full flex flex-col gap-4 xl:gap-10 md:h-[229px] xl:h-[229px] md:w-full xl:w-[375.33px] xl:justify-center"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: feature.id * 0.1 }}
@@ -103,7 +103,7 @@ const Trust = () => {
 
           {/* Center Image */}
           <motion.div
-            className="w-full aspect-[3/4] overflow-hidden rounded-2xl lg:flex-[1] lg:h-auto lg:order-none order-first"
+            className="w-full aspect-[3/4] overflow-hidden rounded-2xl xl:flex-[1] xl:h-auto xl:order-none order-first"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
@@ -126,13 +126,13 @@ const Trust = () => {
           </motion.div>
 
           {/* Right Column */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:flex lg:flex-col lg:flex-1 lg:gap-10">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:flex xl:flex-col xl:flex-1 xl:gap-10">
             {trustFeatures
               .filter((f) => f.side === "right")
               .map((feature) => (
                 <motion.div
                   key={feature.id}
-                  className="bg-[#F8FAF2] rounded-[24px] p-6 lg:p-6 w-full flex flex-col gap-4 lg:gap-10 md:h-[229px] lg:h-[229px] md:w-full lg:w-[375.33px] lg:justify-center"
+                  className="bg-[#F8FAF2] rounded-[24px] p-6 xl:p-6 w-full flex flex-col gap-4 xl:gap-10 md:h-[229px] xl:h-[229px] md:w-full xl:w-[375.33px] xl:justify-center"
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: feature.id * 0.1 }}

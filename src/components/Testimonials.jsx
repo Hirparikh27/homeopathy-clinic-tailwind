@@ -244,7 +244,7 @@ const Testimonials = () => {
       id="testimonials"
       className="pt-10 pb-[100px] bg-[#FAF5F0] relative overflow-hidden md:pb-[60px]"
     >
-      <div className="max-w-[1190px] mx-auto px-4 lg:px-0 relative z-10">
+      <div className="max-w-[1190px] mx-auto px-4 md:px-6 xl:px-0 relative z-10">
         <div className="flex flex-col items-center text-center gap-8 mb-10 lg:flex-row lg:justify-between lg:items-start lg:text-left lg:mb-[88px] lg:gap-0">
           <div className="flex flex-col items-center lg:items-start lg:text-left">
             <h2 className="font-cooper text-[32px] font-normal leading-[1.2] text-[#1A1A1A] max-w-[485px] lg:text-[44px]">
@@ -271,8 +271,8 @@ const Testimonials = () => {
 
       <div className="relative flex flex-col gap-8 md:gap-12">
         {/* Row 1 */}
-        <div className="flex gap-4 md:gap-6 overflow-x-auto scrollbar-none relative w-full px-4 lg:px-0">
-          <div className="flex gap-4 md:gap-6 lg:pl-[calc((100%-1190px)/2)] pr-4 lg:pr-[calc((100%-1190px)/2)]">
+        <div className="flex gap-4 md:gap-6 overflow-x-auto scrollbar-none relative w-full px-4 md:px-6 xl:px-0">
+          <div className="flex gap-4 md:gap-6 xl:pl-[calc((100%-1190px)/2)] pr-4 md:pr-6 xl:pr-[calc((100%-1190px)/2)]">
             {testimonialsData[0].map((item, index) => (
               <Card key={`row1-${index}`} item={item} onPlay={setActiveVideo} />
             ))}
@@ -280,8 +280,8 @@ const Testimonials = () => {
         </div>
 
         {/* Row 2 */}
-        <div className="flex gap-4 md:gap-6 overflow-x-auto scrollbar-none relative w-full px-4 lg:px-0">
-          <div className="flex gap-4 md:gap-6 lg:pl-[calc((100%-1190px)/2)] pr-4 lg:pr-[calc((100%-1190px)/2)]">
+        <div className="flex gap-4 md:gap-6 overflow-x-auto scrollbar-none relative w-full px-4 md:px-6 xl:px-0">
+          <div className="flex gap-4 md:gap-6 xl:pl-[calc((100%-1190px)/2)] pr-4 md:pr-6 xl:pr-[calc((100%-1190px)/2)]">
             {testimonialsData[1].map((item, index) => (
               <Card key={`row2-${index}`} item={item} onPlay={setActiveVideo} />
             ))}
@@ -289,8 +289,8 @@ const Testimonials = () => {
         </div>
 
         {/* Gradients */}
-        <div className="hidden lg:block absolute top-0 left-0 w-[200px] h-full bg-gradient-to-r from-[#FAF5F0] via-[#FAF5F0]/60 to-transparent z-[10] pointer-events-none"></div>
-        <div className="hidden lg:block absolute top-0 right-0 w-[200px] h-full bg-gradient-to-l from-[#FAF5F0] via-[#FAF5F0]/60 to-transparent z-[10] pointer-events-none"></div>
+        <div className="hidden xl:block absolute top-0 left-0 w-[200px] h-full bg-gradient-to-r from-[#FAF5F0] via-[#FAF5F0]/60 to-transparent z-[10] pointer-events-none"></div>
+        <div className="hidden xl:block absolute top-0 right-0 w-[200px] h-full bg-gradient-to-l from-[#FAF5F0] via-[#FAF5F0]/60 to-transparent z-[10] pointer-events-none"></div>
       </div>
 
       {activeVideo && (

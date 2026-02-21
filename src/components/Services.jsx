@@ -73,37 +73,39 @@ const serviceImages = {
 const Services = () => {
   return (
     <section id="services" className="pt-10 pb-20">
-      <div className="max-w-[1190px] mx-auto px-4 lg:px-0">
-        <div className="flex flex-col items-start gap-5 mb-10 w-full md:flex-row md:justify-between md:items-start md:gap-0 md:mb-[88px]">
-          <div className="text-left flex flex-col max-w-[500px]">
+      <div className="max-w-[1190px] mx-auto px-4 md:px-6 lg:px-6 xl:px-0">
+        <div className="flex flex-col items-start gap-5 mb-10 w-full md:items-center md:text-center md:gap-6 lg:flex-row lg:justify-between lg:items-start lg:gap-0 lg:mb-[88px] lg:text-left">
+          <div className="text-left flex flex-col max-w-[500px] md:text-center lg:text-left">
             <h2 className="font-cooper font-normal leading-none text-[#1A1A1A] text-[32px] lg:text-[44px]">
               Our Homeopathic Treatment Services
             </h2>
           </div>
-          <div className="text-left flex flex-col max-w-[600px] lg:text-left lg:items-start">
-            <p className="font-josefin font-normal leading-[1.3] text-[#666666] mb-6 text-[18px] lg:text-[24px] lg:text-[#666666] lg:leading-[1.3] lg:text-left">
+          <div className="text-left flex flex-col max-w-[600px] md:items-center lg:text-left lg:items-start">
+            <p className="font-josefin font-normal leading-[1.3] text-[#666666] mb-6 text-[18px] lg:text-[24px] md:text-center lg:text-left">
               At Enaaya Homeopathy Clinic, we believe in healing the root
               cause—not just symptoms.
             </p>
-            <Link
-              to="footer"
-              smooth={true}
-              duration={500}
-              offset={-80}
-              className="bg-primary text-white h-[48px] w-[143px] flex items-center justify-center gap-2 rounded-[72px] font-bold font-josefin text-[18px] leading-none hover:bg-primary-dark hover:-translate-y-0.5 transition-all duration-300 cursor-pointer no-underline"
-            >
-              Contact Us
-            </Link>
+            <div className="flex justify-start md:justify-center lg:justify-start">
+              <Link
+                to="footer"
+                smooth={true}
+                duration={500}
+                offset={-80}
+                className="bg-primary text-white h-[48px] w-[143px] flex items-center justify-center gap-2 rounded-[72px] font-bold font-josefin text-[18px] leading-none hover:bg-primary-dark hover:-translate-y-0.5 transition-all duration-300 cursor-pointer no-underline"
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-[1190px] mx-auto px-4 lg:px-0">
-        <div className="overflow-x-auto scrollbar-none pb-4 lg:pb-8 lg:overflow-visible touch-pan-x">
-          <div className="flex flex-row gap-6 lg:flex-wrap lg:justify-center">
+      <div className="max-w-[1190px] mx-auto px-4 md:px-6 lg:px-6 xl:px-0">
+        <div className="overflow-x-auto scrollbar-none pb-4 lg:pb-8 touch-pan-x">
+          <div className="flex flex-row gap-6">
             {services.map((service, index) => (
               <motion.div
-                className="w-[220px] md:w-[240px] lg:w-[calc(25%-18px)] shrink-0 lg:shrink"
+                className="w-[220px] md:w-[240px] shrink-0"
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
