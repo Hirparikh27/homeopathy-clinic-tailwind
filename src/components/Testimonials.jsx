@@ -6,6 +6,11 @@ import video2 from "../assets/videos/Review Video 2 (2).mp4";
 import video3 from "../assets/videos/Review Video 3.mp4";
 import video4 from "../assets/videos/Review Video 4.mp4";
 import video5 from "../assets/videos/Review Video 5.mp4";
+import posterImg1 from "../assets/images/poster-img-1.png";
+import posterImg2 from "../assets/images/poster-img-2.png";
+import posterImg3 from "../assets/images/poster-img-3.png";
+import posterImg4 from "../assets/images/poster-img-4.png";
+import posterImg5 from "../assets/images/poster-img-5.png";
 
 const testimonialsData = [
   // Row 1
@@ -19,6 +24,7 @@ const testimonialsData = [
     {
       type: "video",
       videoSource: video1,
+      posterImg: posterImg1,
       patient: "Patient",
       condition: "Success Story",
     },
@@ -31,6 +37,7 @@ const testimonialsData = [
     {
       type: "video",
       videoSource: video2,
+      posterImg: posterImg2,
       patient: "Patient",
       condition: "Success Story",
     },
@@ -46,6 +53,7 @@ const testimonialsData = [
     {
       type: "video",
       videoSource: video3,
+      posterImg: posterImg3,
       patient: "Patient",
       condition: "Success Story",
     },
@@ -58,6 +66,7 @@ const testimonialsData = [
     {
       type: "video",
       videoSource: video4,
+      posterImg: posterImg4,
       patient: "Patient",
       condition: "Success Story",
     },
@@ -70,6 +79,7 @@ const testimonialsData = [
     {
       type: "video",
       videoSource: video5,
+      posterImg: posterImg5,
       patient: "Patient",
       condition: "Success Story",
     },
@@ -108,33 +118,28 @@ const testimonialsData = [
 //     </div>
 //   );
 // };
-const VideoPreview = ({ src, onClick }) => {
-  const [ready, setReady] = React.useState(false);
-
+const VideoPreview = ({ posterImg, onClick }) => {
   return (
     <div
       onClick={onClick}
-      className="relative w-full h-full rounded-2xl overflow-hidden cursor-pointer"
+      className="relative w-full h-full rounded-2xl overflow-hidden cursor-pointer group"
     >
-      {/* Skeleton */}
-      {!ready && <div className="absolute inset-0 skeleton-shimmer" />}
-
-      {/* Video */}
-      <video
-        src={src}
-        muted
-        playsInline
-        preload="metadata"
-        onCanPlay={() => setReady(true)}
-        className={`w-full h-full object-cover transition-opacity duration-300 ${
-          ready ? "opacity-100" : "opacity-0"
-        }`}
+      {/* Poster Image */}
+      <img
+        src={posterImg}
+        alt="Video Testimonial Poster"
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
 
-      {/* Play Icon */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-12 h-12 rounded-full bg-white/30 backdrop-blur flex items-center justify-center text-white text-xl">
-          ▶
+      {/* Overlay to ensure play icon visibility */}
+      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+
+      {/* Play Icon Container */}
+      <div className="absolute inset-0 flex items-center justify-center p-6 text-center">
+        <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center transition-transform duration-500 group-hover:scale-110 border border-white/20">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M8.5 5V19L19.5 12L8.5 5Z" fill="white" />
+          </svg>
         </div>
       </div>
     </div>
@@ -155,6 +160,17 @@ const StarRating = () => (
 );
 
 const VideoModal = ({ videoSource, onClose }) => {
+  React.useEffect(() => {
+    if (videoSource) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    };
+  }, [videoSource]);
+
   if (!videoSource) return null;
 
   return (
@@ -204,20 +220,10 @@ const Card = ({ item, onPlay }) => {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
       >
-        <div
-          className="w-full h-full relative group cursor-pointer"
+        <VideoPreview
+          posterImg={item.posterImg}
           onClick={() => onPlay(item.videoSource)}
-        >
-          <VideoPreview
-            src={item.videoSource}
-            onClick={() => onPlay(item.videoSource)}
-          />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M8 5V19L19 12L8 5Z" fill="white" />
-            </svg>
-          </div>
-        </div>
+        />
       </motion.div>
     );
   }
@@ -250,7 +256,7 @@ const Testimonials = () => {
       id="testimonials"
       className="pt-10 pb-[100px] bg-[#FAF5F0] relative overflow-hidden md:pb-[60px]"
     >
-      <div className="max-w-[1190px] mx-auto px-4 lg:px-0 relative z-10">
+      <div className="max-w-[1190px] mx-auto px-4 md:px-6 xl:px-0 relative z-10">
         <div className="flex flex-col items-center text-center gap-8 mb-10 lg:flex-row lg:justify-between lg:items-start lg:text-left lg:mb-[88px] lg:gap-0">
           <div className="flex flex-col items-center lg:items-start lg:text-left">
             <h2 className="font-cooper text-[32px] font-normal leading-[1.2] text-[#1A1A1A] max-w-[485px] lg:text-[44px]">
@@ -277,8 +283,8 @@ const Testimonials = () => {
 
       <div className="relative flex flex-col gap-8 md:gap-12">
         {/* Row 1 */}
-        <div className="flex gap-4 md:gap-6 overflow-x-auto scrollbar-none relative w-full px-4 lg:px-0">
-          <div className="flex gap-4 md:gap-6 lg:pl-[calc((100%-1190px)/2)] pr-4 lg:pr-[calc((100%-1190px)/2)]">
+        <div className="flex gap-4 md:gap-6 overflow-x-auto scrollbar-none relative w-full px-4 md:px-6 xl:px-0">
+          <div className="flex gap-4 md:gap-6 xl:pl-[calc((100%-1190px)/2)] pr-4 md:pr-6 xl:pr-[calc((100%-1190px)/2)]">
             {testimonialsData[0].map((item, index) => (
               <Card key={`row1-${index}`} item={item} onPlay={setActiveVideo} />
             ))}
@@ -286,8 +292,8 @@ const Testimonials = () => {
         </div>
 
         {/* Row 2 */}
-        <div className="flex gap-4 md:gap-6 overflow-x-auto scrollbar-none relative w-full px-4 lg:px-0">
-          <div className="flex gap-4 md:gap-6 lg:pl-[calc((100%-1190px)/2)] pr-4 lg:pr-[calc((100%-1190px)/2)]">
+        <div className="flex gap-4 md:gap-6 overflow-x-auto scrollbar-none relative w-full px-4 md:px-6 xl:px-0">
+          <div className="flex gap-4 md:gap-6 xl:pl-[calc((100%-1190px)/2)] pr-4 md:pr-6 xl:pr-[calc((100%-1190px)/2)]">
             {testimonialsData[1].map((item, index) => (
               <Card key={`row2-${index}`} item={item} onPlay={setActiveVideo} />
             ))}
@@ -295,8 +301,8 @@ const Testimonials = () => {
         </div>
 
         {/* Gradients */}
-        <div className="hidden lg:block absolute top-0 left-0 w-[200px] h-full bg-gradient-to-r from-[#FAF5F0] via-[#FAF5F0]/60 to-transparent z-[10] pointer-events-none"></div>
-        <div className="hidden lg:block absolute top-0 right-0 w-[200px] h-full bg-gradient-to-l from-[#FAF5F0] via-[#FAF5F0]/60 to-transparent z-[10] pointer-events-none"></div>
+        <div className="hidden xl:block absolute top-0 left-0 w-[200px] h-full bg-gradient-to-r from-[#FAF5F0] via-[#FAF5F0]/60 to-transparent z-[10] pointer-events-none"></div>
+        <div className="hidden xl:block absolute top-0 right-0 w-[200px] h-full bg-gradient-to-l from-[#FAF5F0] via-[#FAF5F0]/60 to-transparent z-[10] pointer-events-none"></div>
       </div>
 
       {activeVideo && (

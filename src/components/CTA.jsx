@@ -12,7 +12,7 @@ const CTA = () => {
         <div className="h-1/2 bg-[#FAF5F0] w-full"></div>
       </div>
 
-      <div className="max-w-[1190px] mx-auto relative z-10 px-4 lg:px-0">
+      <div className="max-w-[1190px] mx-auto relative z-10 px-4 md:px-14 xl:px-0">
         <motion.div
           className="bg-white rounded-[24px] shadow-[0_4px_24px_rgba(0,0,0,0.06)] flex flex-col lg:flex-row items-center justify-between px-8 lg:px-[40px] py-8 lg:py-0 lg:h-[170px] gap-8 lg:gap-0"
           initial={{ opacity: 0, scale: 0.95 }}
